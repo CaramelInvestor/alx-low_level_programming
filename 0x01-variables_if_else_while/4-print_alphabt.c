@@ -13,7 +13,7 @@ int main(void)
 	char(ch);
 
 
-		for (ch = 'a'; ch < 'e'; ch != 'e'; ch >= 'f'; ch != 'q'; ch >= 'r')
+		for (ch = 'a'; ch < 'e'; ch != 'e'; ch >= 'f'; ch != 'q'; ch >= 'r'; ch++)
 			putchar(ch);
 		putchar('\n');
 	return (0);
