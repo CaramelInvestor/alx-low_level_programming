@@ -15,9 +15,10 @@ int main(void)
 	int s;
 
         for (sd = 0; sd < 10; sd++)
-                putchar(sd);
-	for (sd < 10)
-
+		putchar(sd);
+	for (c = ','; c++)
+		putchar(c);
+	for (s = ' '; s++);
         printf("\n");
         return (0);
 	return (0);
