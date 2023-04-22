@@ -14,11 +14,11 @@ int main(void)
 	int c;
 	int s;
 
-	for (n = 0; n < 10; n++)
+	for (n = 0; n < 10)
 		putchar(n);
-	for (c = ','; c++;)
+	for (c = ',')
 		putchar(c);
-	for (s = ' '; s++;)
+	for (s = ' ')
 		putchar(s);
 	printf("\n");
 	return (0);
