@@ -10,13 +10,15 @@
  */
 int main(void)
 {
-	int n;
-	int l;
+	int sd;
+	int c;
+	int s;
 
-	for (n = 0; n <= 9; n++)
-		putchar(n);
-	for (l = 'a'; l <= 'f'; l++)
-		putchar(l);
-	putchar('\n');
+        for (sd = 0; sd < 10; sd++)
+                putchar(sd);
+	for (sd < 10)
+
+        printf("\n");
+        return (0);
 	return (0);
 }
