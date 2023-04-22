@@ -10,12 +10,12 @@
  */
 int main(void)
 {
-	int sd;
+	int n;
 	int c;
 	int s;
 
-	for (sd = 0; sd < 10; sd++)
-		putchar(sd);
+	for (n = 0; n < 10; n++)
+		putchar(n);
 	for (c = ','; c++;)
 		putchar(c);
 	for (s = ' '; s++;)
