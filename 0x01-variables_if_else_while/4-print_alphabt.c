@@ -13,7 +13,8 @@ int main(void)
 	char ch;
 
 
-		for (ch = 'a'; ch < 'e'; ch != 'e'; ch >= 'f'; ch != 'q'; ch >= 'r'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
+		if (ch != q; ch != e)
 			putchar(ch);
 		putchar('\n');
 	return (0);
