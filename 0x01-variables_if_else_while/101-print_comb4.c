@@ -1,36 +1,29 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main -Serves as the entry point to the program
- *
- * Return: Return zero if no error is encountered,
- * else return a non zero number
+ * main - prints all possible different combinations of three digits
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int n;
-	int m;
-	int o;
+	int n, m, l;
 
 	for (n = 48; n < 58; n++)
 	{
 		for (m = 49; m < 58; m++)
 		{
-			for (o = 50; o < 58; o++)
+			for (l = 50; l < 58; l++)
 			{
-				if (o > m && m > n)
+				if (l > m && m > n)
 				{
 					putchar(n);
 					putchar(m);
-					putchar(o);
-					if (n != 55 || m != 5)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+					putchar(l);
+					if (n != 55 || m != 56)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 		}
@@ -38,3 +31,4 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
