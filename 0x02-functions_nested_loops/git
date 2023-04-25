@@ -1,4 +1,4 @@
 #!/bin/bash
 git add .
-git commit -m "file committed"
+git commit -m "0-putchar"
 git push
