@@ -16,8 +16,8 @@ void more_numbers(void)
 		{
 			if (num > 9)
 			{
-				for (t = num / 10)
-				for (u = num % 10)
+				t = num / 10;
+				u = num % 10;
 				{
 					_putchar(t);
 					_putchar(u);
@@ -25,5 +25,5 @@ void more_numbers(void)
 			}
 		}
 	}
-		_putchar('\n');
+	_putchar('\n');
 }
