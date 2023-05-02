@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 void reset_to_98(int *n);
-[
+{
 	*n = &n
-]
+}
 
 /**
  * main - check the code for Holberton School students.
