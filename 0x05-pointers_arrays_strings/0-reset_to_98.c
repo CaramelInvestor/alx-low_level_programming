@@ -18,8 +18,10 @@ int main(void)
 	int n;
 
 	n = 402;
-	printf("%d\n", n);
+	_putchar(n);
+	_putchar('\n');
 	reset_to_98(&n);
-	printf("%d\n", n);
+	_putchar(&n);
+	_putchar('\n');
 	return (0);
 }
