@@ -2,13 +2,15 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
+ * _puts- check the code
+ * @str: string to print on new line
  * Return: Always 0.
  */
-void _puts(char *str);
+void _puts(char *str)
 {
-	char *str[]; {I, do, not, fear  computers. I fear the lack of them - Isaac Asimov}
-	_puts(str);
-    return (0);
+	while (*str != '\0')
+	{
+		_putchar(*str++);
+	}
+		_putchar('\n');
 }
