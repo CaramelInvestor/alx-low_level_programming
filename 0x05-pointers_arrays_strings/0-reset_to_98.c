@@ -3,10 +3,10 @@
 
 /**
  * reset_to_98 - function that takes a pointer to an int
- * @n - an integer pointer
- * Return: Nothing.
+ * @n: an integer input pointer
+ * Return: Nothing!
  */
-void reset_to_98(int *n);
+void reset_to_98(int *n)
 {
 	*n = 98;
 }
