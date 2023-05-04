@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  *print_rev - a function that prints a string,
@@ -8,20 +9,30 @@
  *Return: Nothing
  */
 void print_rev(char *s)
-{
-	int longi = 0;
-	int r;
+/*{*/
+/*	int longi = 0;*/
+/*	int r;*/
 
-	while (*s != '\0')
+/*	while (*s != '\0')*/
+/*	{*/
+/*		longi++;*/
+/*		s++;*/
+/*	}*/
+/*	s--;*/
+/*	for (r = longi; r > 0; r--)*/
+/*	{*/
+/*		_putchar(*s);*/
+/*		s--;*/
+/*	}*/
+/*		_putchar('\n');*/
+/*}*/
+{
+	int len = strlen(s);
+	len--;
+
+	for (; len >= 0; len--)
 	{
-		longi++;
-		s++;
-	}
-	s--;
-	for (r = longi; r > 0; r--)
-	{
-		_putchar(*s);
-		s--;
+		_putchar(s[len]);
 	}
 		_putchar('\n');
 }
