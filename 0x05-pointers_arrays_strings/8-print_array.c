@@ -12,7 +12,10 @@ void print_array(int *a, int n)
 
 	for (p = 0; p < n; p++)
 	{
-		printf("%d, ", a[p]);
+		if (p == (n - 1))
+			printf("%d", a[p]);
+		else
+			printf("%d, ", a[p]);
 	}
 	printf("\n");
 }
