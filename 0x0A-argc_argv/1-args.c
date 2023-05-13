@@ -11,8 +11,8 @@ int main(int argc, char **argv)
 {
 	int n;
 
-	for(n = 0; n < argc; n++)
-		(*argv)++; 
+	for (n = 0; n < argc; n++)
+		(*argv)++;
 	printf("%d\n", n - 1);
 	return (0);
 }
