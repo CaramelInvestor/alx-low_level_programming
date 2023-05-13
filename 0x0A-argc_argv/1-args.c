@@ -9,6 +9,10 @@
  */
 int main(int argc, char **argv)
 {
-	printf("%d\n", argc - 1);
+	int n;
+
+	for(n = 0; n < argc; n++)
+		(*argv)++; 
+	printf("%d\n", n - 1);
 	return (0);
 }
