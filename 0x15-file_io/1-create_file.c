@@ -3,15 +3,14 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <iunistd.h>
+#include <unistd.h>
 #include <stdlib.h>
 /**
- * create_file - function that creates a file
- * @filename: pointer to the name of the file
- * @text_content: string to add to the EOF
- * Return: If the function fails or filename is NULL - -1.
- * If the file does not exist the user lacks write permissions - -1.
- * Otherwise - 1.
+ * create_file - Creates a file.
+ * standard output.
+ * @filename: Name of the file to create.
+ * @text_content: NULL terminated string to write to the file.
+ * Return: 1 on success, -1 on failure.
  */
 int create_file(const char *filename, char *text_content)
 {
