@@ -9,52 +9,23 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int i;
-	dlistint_t *newnode, *current;
+	dlistint_t *newnode;
 
+	if ((*h)->next == NULL)
+		return (add_dnodeint_end(h, n));
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+	for (; idx != 1; idx--)
+	{
+		(*h) = (*h)->next;
+		if ((*h) == NULL)
+			return (NULL);
+	}
 	newnode = malloc(sizeof(dlistint_t));
-	if (!newnode)
-		return (NULL);
 	newnode->n = n;
-
-	if (*h == NULL && idx > 0)
-	{
-		free(newnode);
-		return (NULL); /* free newnode and return NULL if idx is greater than 0 */
-	}
-	if (newnode == NULL)
-	{
-		/* insert at the beginng of the list */
-		newnode->prev = NULL;
-		newnode->next = *h;
-		if (*h == NULL)
-		{
-			(*h)->prev = newnode;
-		}
-		*h = newnode;
-	}
-	else
-	{
-		/* Transverse the list to find the position to insert the new node */
-		current = *h;
-		for (i = 0; i < idx - 1 && current != NULL; i++)
-		{
-			current = current->next;
-		}
-	if (current == NULL)
-	{
-		/* index is out of range*/
-		free(newnode);
-		return (NULL);
-	}
-	/* insert the newnode */
-	newnode->next = current->next;
-	newnode->prev = current;
-	if (current->next != NULL)
-	{
-		current->next->prev = newnode;
-	}
-	current->next = newnode;
-	}
+	newnode->prev = (*h);
+	newnode->next = (*h)->next;
+	(*h)->next->prev = newnode;
+	(*h)->next = newnode;
 	return (newnode);
 }
